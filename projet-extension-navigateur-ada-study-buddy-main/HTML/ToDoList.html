@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To Do List</title>
+        <link rel="stylesheet" href="../CSS/ToDoList.css" />
+        <script type="module" src="../JS/ToDoList.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <i>Speaker</i>
+                <b>Camera</b>
+                <h1>ToDoList</h1>
+                <form class="form-container">
+                    <input
+                        class="form-control"
+                        type="text"
+                        placeholder="Ajouter une tâche..."
+                        name="title"
+                        data-com.bitwarden.browser.user-edited="yes"
+                    />
+                    <button class="btn btn-primary">Ajouter</button>
+                </form>
+            </div>
+            <div class="btn-group mb-4" role="group">
+                <button
+                    type="button"
+                    class="btn btn-outline-primary active"
+                    data-filter="all"
+                >
+                    Toutes
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    data-filter="todo"
+                >
+                    A faire
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    data-filter="done"
+                >
+                    Faites
+                </button>
+            </div>
+            <main>
+                <ul class="list-group"></ul>
+            </main>
+            <nav class="navigation">
+                <ul class="navigation-block">
+                    <li class="navigation-item">
+                        <a href="pomodoro.html" class="animated-link">
+                            <img src="../images/timer.svg" alt=""
+                        /></a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="AdaLovelace.html" class="animated-link"
+                            ><img src="../images/newspaper.svg" alt=""
+                        /></a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="ToDoList.html" class="animated-link"
+                            ><img src="../images/list.svg" alt="" color="red"
+                        /></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

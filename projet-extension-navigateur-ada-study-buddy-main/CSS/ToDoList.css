@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+:root {
+    --background: #e74f3c;
+    --color: #f9dada;
+    --red: #db2a34;
+    --blue: #2477ff;
+    --dark-blue: #17193b;
+    --purple: #474d84;
+    --purple-secondary: #333867;
+    --title-primary-color: rgb(231 226 226);
+}
+
+body {
+    background: transparent;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #1f1f1f;
+    margin: 8px;
+    padding-top: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+    width: 295px;
+    height: 559px;
+    background-color: var(--color);
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919,
+        0px 0px 0px 20px #111;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    &:after {
+        bottom: 7px;
+        width: 140px;
+        height: 4px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+    }
+
+    &:before {
+        top: 0px;
+        width: 56%;
+        height: 30px;
+        background-color: #1f1f1f;
+        border-radius: 0px 0px 40px 40px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    i,
+    b {
+        position: absolute;
+        display: block;
+        color: transparent;
+        z-index: 2;
+    }
+
+    i {
+        position: absolute;
+        display: block;
+        color: transparent;
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, 6px);
+        height: 8px;
+        width: 15%;
+        background-color: #101010;
+        border-radius: 8px;
+        box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
+    }
+
+    b {
+        left: 4%;
+        top: 0px;
+        transform: translate(180px, 4px);
+        width: 12px;
+        height: 12px;
+        background-color: #101010;
+        border-radius: 12px;
+        box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
+
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: #2d4d76;
+            width: 6px;
+            height: 6px;
+            top: 2px;
+            left: 2px;
+            top: 3px;
+            left: 3px;
+            display: block;
+            border-radius: 4px;
+            box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+        }
+    }
+    h1 {
+        color: var(--color);
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+}
+.header {
+    width: 100%;
+    background: var(--background);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+form input {
+    padding: 8px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    /* border-radius: 15; */
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    max-width: 500px;
+    transition: background-color 200ms ease-in-out;
+    width: 60%;
+    margin-left: 7px;
+    background-color: var(--color);
+}
+input::placeholder {
+    color: var(--background); /* Couleur du placeholder */
+    opacity: 1; /* Par défaut, certains navigateurs appliquent une opacité au placeholder */
+}
+form button {
+    padding: 8px;
+    font-size: 17px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 80px;
+    border: none;
+    color: var(--background);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color);
+}
+form button:hover {
+    background: var(--background);
+    color: var(--color);
+}
+/* .form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--background);
+    height: 130px;
+    width: 100%;
+    z-index: 1;
+} */
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.btn-group .btn {
+    border: none;
+    color: var(--color);
+    background: var(--background);
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-group .btn:hover {
+    border: none;
+    color: var(--background);
+    background: var(--color);
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo button img {
+    height: 10px;
+}
+
+/*
+main .list-group {
+    border: 1px inset red;
+    padding: 0;
+    overflow-y: scroll;
+}
+main .list-group .todo {
+    display: list-item;
+    list-style-type: none;
+    width: 100%;
+    padding-inline: 0;
+    background: var(--background);
+    padding-inline: 10px;
+    margin-top: 10px;
+}*/
+
+nav.navigation {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    background: white;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+}
+
+.navigation .navigation-block {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .navigation-block .navigation-item {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: 1px inset red; */
+    flex: 1;
+}
+
+.navigation .navigation-block .navigation-item img {
+    padding: 10px;
+    border-radius: 50%;
+    /* background: #000; */
+    box-shadow: 5px 5px 10px #8d8d8d, -5px -5px 10px #ffffff;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+/*Ce que Ruth a ajouté*/
+main .list-group {
+    max-height: 100%; /* Assure que la hauteur ne dépasse pas le conteneur */
+    overflow-y: auto; /* Activer le défilement seulement si nécessaire */
+    padding: 0;
+    border: none;
+}
+
+main .list-group .todo {
+    font-size: 15px; /* Optionnel : réduire la taille du texte */
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    background: var(--background);
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 200ms ease-in-out;
+    box-sizing: border-box; /* Inclut le padding et les bordures dans le calcul de la largeur */
+    color: var(--color);
+    padding: 3px 5px; /* 3px en haut et en bas, 5px à gauche et à droite */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+main .list-group .todo span {
+    margin-left: 10px;
+
+    padding-bottom: 5px;
+}
+/* Conteneur des boutons */
+.button-container {
+    display: flex;
+    gap: 8px; /* Espace entre les boutons */
+    align-items: center; /* Aligne les boutons verticalement */
+}
+
+.check-btn,
+.delete-btn {
+    font-size: 15px; /*la taille des écrits*/
+    cursor: pointer;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 80%;
+    margin: 0 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Évite le padding qui pourrait influencer la taille de l'image */
+    overflow: hidden; /* S'assure que l'image ne dépasse jamais du bouton */
+    background-color: var(--color);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    clip-rule: pointer;
+}
+
+.todo li .check-btn img,
+.todo li .delete-btn img {
+    pointer-events: none;
+    height: 20px;
+}
+
+.checked {
+    transition: 0.2s;
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: whitesmoke;
+}
+
+/* Nouvelle classe pour l'animation de disparition */
+.fade-out {
+    opacity: 0;
+    transform: translateX(
+        -20px
+    ); /* Décalage horizontal lors de la suppression */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

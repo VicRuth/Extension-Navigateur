@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Ada Study Buddy",
+    "version": "1.0",
+    "description": "Extension pour les apprenant.e.s",
+    "action": {
+        "default_popup": "HTML/pomodoro.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "permissions": ["storage", "activeTab", "scripting"]
+}

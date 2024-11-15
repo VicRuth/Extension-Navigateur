@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pomodoro</title>
+        <link rel="stylesheet" href="../CSS/pomodoro.css" />
+        <script type="module" src="../JS/pomodoro.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <i>Speaker</i>
+            <b>Camera</b>
+            <h1>Pomodoro Timer</h1>
+
+            <div class="card-header-buttons">
+                <button id="buttonTypePomodoro" class="active">Pomodoro</button>
+
+                <button id="buttonTypeShortBreak">Short Break</button>
+            </div>
+
+            <div class="pomodoro-body">
+                <div id="circularProgressBar" class="progress-bar">
+                    <div class="progress-bar-inner">
+                        <div class="circle">
+                            <h2 class="progress-value">25:00</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pomodoro-footer">
+                <button id="start">
+                    <img src="../images/play.png" alt="image start pomodoro" />
+                </button>
+                <button id="stop">
+                    <img src="../images/pause.png" alt="image start pomodoro" />
+                </button>
+                <button id="reset">
+                    <img
+                        src="../images/restart.png"
+                        alt="image start pomodoro"
+                    />
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="pomodoro.html" class="animated-link">
+                            <img src="../images/timer.svg" alt=""
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="AdaLovelace.html" class="animated-link"
+                            ><img src="../images/newspaper.svg" alt=""
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="ToDoList.html" class="animated-link"
+                            ><img src="../images/list.svg" alt="" color="red"
+                        /></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>
